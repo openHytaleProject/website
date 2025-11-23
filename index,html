@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>openHytale — README</title>
+  <meta name="description" content="openHytale — community reverse-engineering project README" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.03);
+      --radius:16px;
+      color-scheme: dark;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background: radial-gradient(1200px 600px at 10% 10%, rgba(110,231,183,0.05), transparent),
+                linear-gradient(180deg, #071024 0%, var(--bg) 100%);
+      color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      padding:48px; display:flex; align-items:flex-start; justify-content:center;
+    }
+
+    .wrapper{max-width:900px; width:100%}
+
+    header{
+      display:flex; gap:16px; align-items:center; margin-bottom:22px;
+    }
+    .logo{
+      width:84px; height:84px; border-radius:14px; background:linear-gradient(135deg,#13233a,#163842);
+      display:flex; align-items:center; justify-content:center; box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+      flex-shrink:0; border:1px solid rgba(255,255,255,0.04);
+    }
+    .logo h1{margin:0; font-size:28px; letter-spacing:-1px}
+
+    .title h2{margin:0; font-weight:800; font-size:20px}
+    .title p{margin:6px 0 0; color:var(--muted); font-size:13px}
+
+    main{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:var(--radius); padding:28px; box-shadow: 0 10px 40px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .lead{margin:0 0 18px; color:#dffcf0}
+    .disclaimer{background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent); padding:12px; border-radius:10px; color:var(--muted); font-size:14px; border:1px dashed rgba(255,255,255,0.02)}
+
+    section{margin-top:20px}
+    h3{margin:0 0 10px; font-size:16px}
+    ul{margin:8px 0 0 18px; color:var(--muted)}
+    li{margin:6px 0}
+
+    .badge{display:inline-block;background:var(--glass);padding:6px 10px;border-radius:999px;font-weight:600;color:var(--accent);font-size:12px;border:1px solid rgba(110,231,183,0.08)}
+
+    footer{margin-top:26px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:720px){
+      body{padding:20px}
+      .logo{width:64px;height:64px}
+      .title h2{font-size:18px}
+    }
+
+    /* decorative code block */
+    .codebox{margin-top:12px;padding:12px;border-radius:10px;background:rgba(0,0,0,0.12);font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;color:#bfeee0;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo" aria-hidden>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="4" fill="url(#g)" />
+          <path d="M7 14c1.5-3 4-5 7-6" stroke="white" stroke-opacity="0.85" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#163842" />
+              <stop offset="1" stop-color="#0b2b3c" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="title">
+        <h2>openHytale</h2>
+        <p class="muted">Community-driven reverse engineering & decompilation project</p>
+      </div>
+
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <span class="badge">MIT</span>
+        <span style="color:var(--muted);font-size:13px;margin-left:6px">preparation workspace</span>
+      </div>
+    </header>
+
+    <main>
+      <p class="lead">openHytale is a community-driven reverse engineering and decompilation project for the game <strong>Hytale</strong>. Once we obtain the game files, analysis and documentation will begin immediately.</p>
+
+      <div class="disclaimer">
+        ⚠️ <strong>Disclaimer:</strong> This project is not affiliated with Hytale or Hypixel Studios. All research is for educational and modding purposes only.
+      </div>
+
+      <section>
+        <h3>Project Goal</h3>
+        <p>To decompile, analyze, and document Hytale as soon as we obtain access to the game.</p>
+        <ul>
+          <li>How the engine functions</li>
+          <li>How assets and data formats are structured</li>
+          <li>How scripts, systems, and internal logic operate</li>
+          <li>Possibilities for modding and tooling</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Current Status</h3>
+        <p>Hytale is not publicly available yet. This repository serves as a <strong>preparation and planning workspace</strong>. Active reverse engineering will begin when the game becomes accessible.</p>
+      </section>
+
+      <section>
+        <h3>Expected Tools</h3>
+        <p>Depending on Hytale's final technology stack, we expect to use:</p>
+        <ul>
+          <li>Ghidra / IDA Free</li>
+          <li>Java or C# decompilers</li>
+          <li>Python for tooling and analysis</li>
+          <li>Rust / Go for fast utilities</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Contributing</h3>
+        <p>Contributions are welcome once the project becomes active. Help with research, analysis, documentation, and tooling is appreciated.</p>
+        <div class="codebox">Note: This repository currently contains only this README.</div>
+      </section>
+
+      <section>
+        <h3>License</h3>
+        <p>This project is released under the <strong>MIT License</strong>.</p>
+      </section>
+
+      <footer>
+        <div>openHytale — understanding Hytale from the inside out.</div>
+        <div style="color:var(--muted);font-size:13px">Made with ♥ for reverse engineering</div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
